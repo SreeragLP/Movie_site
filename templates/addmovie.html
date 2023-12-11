@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<style>
+
+  .form-label
+  {
+  color: red;
+  font-weight;
+  font-size: 20px;
+  }
+
+
+  .black-button {
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  border: 3px solid red;
+  width: 200px;
+  border-radius: 5px;
+  font-size: 21px;
+}
+
+
+
+
+</style>
+
+<h1><center>Add Your Movies Here</h1>
+
+<form method="POST" enctype="multipart/form-data">
+  {% csrf_token %}
+
+
+
+    <div class="container" >
+      <div class="border p-4">
+  <label  class="form-label">Movie Poster</label>
+  <input type="file" class="form-control" name="p">
+</div>
+
+
+<div class="mb-3">
+  <div class="border p-4">
+  <label  class="form-label">Movie Title</label>
+  <input type="text" class="form-control" name="t" placeholder="Enter Movie Title">
+</div>
+
+<div class="mb-3">
+  <div class="border p-4">
+  <label  class="form-label">Movie Director</label>
+  <input type="text" class="form-control" name="d" placeholder="Enter Director's Name">
+</div>
+
+<div class="mb-3">
+  <div class="border p-4">
+  <label  class="form-label">Movie Genre</label>
+  <input type="text" class="form-control" name="g" placeholder="Enter Movie Genre">
+</div>
+
+
+<div class="mb-3">
+  <div class="border p-4">
+    <input type="submit" class="black-button">
+</div>
+
+
+
+  </form>
+
+
+
+
+
+
+{% endblock %}
+
+

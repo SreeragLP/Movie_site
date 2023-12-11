@@ -1,0 +1,123 @@
+/* Reset some default browser styles */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set a background image and font styles */
+body {
+    background: url('background-image.jpg') center/cover no-repeat fixed;
+    font-family: 'Cinzel Decorative', 'Georgia', sans-serif; /* 'Cinzel Decorative' is the fantasy font */
+}
+
+/* Style the header */
+header {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+/* Add an animated header text */
+header h1 {
+    font-size: 36px;
+    animation: fadeInUp 2s;
+}
+
+
+/* Style links */
+a {
+    color: #a2d9ff;
+    text-decoration: none;
+    transition: color 0.3s;
+     /* 'HarryPotter' is a fantasy-inspired font */
+}
+
+a:hover {
+    color: #fff;
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.7);
+}
+
+/* Style Bootstrap cards with animation */
+.card {
+    background-color: rgba(255, 255, 255, 0.9);
+    border: none;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Style buttons */
+.button {
+    background-color: #a2d9ff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #007bff;
+}
+
+/* Style footer */
+footer {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Define the fadeInUp animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+/* Define the @font-face rule to include the 'RingbearerMedium' font */
+@font-face {
+    font-family: 'RingbearerMedium-51mgZ';
+    src: url('{% static "fonts/RingbearerMedium-51mgZ.ttf" %}') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Style your navigation bar using the 'RingbearerMedium' font */
+nav {
+    font-family: 'RingbearerMedium-51mgZ', sans-serif;
+    background-color: #191f13; /* Dark green background */
+    color: #ffc800; /* Gold text color */
+    padding: 10px;
+    text-align: center;
+    /* Your other navigation bar styles here */
+}
+
+/* Style navigation links */
+nav a {
+    color: #ffc800; /* Gold text color for links */
+    text-decoration: none;
+    padding: 10px 20px;
+    transition: color 0.3s;
+}
+
+/* Change link color on hover */
+nav a:hover {
+    color: #fff; /* White text color on hover */
+}

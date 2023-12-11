@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Deleted</title>
+
+    <style>
+
+    body
+    {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    text-align: center;
+    padding: 50px;
+    }
+
+    .container
+    {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.3);
+    max-width: 400px;
+    margin: 0 auto;
+    }
+
+    h1
+    {
+    color: #ff6600;
+    }
+
+    p
+    {
+    font-size: 18px;
+    color: #333333;
+    }
+
+    a
+    {
+    text-decoration: none;
+    background-color: #ff6600;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+    }
+
+
+    .image-container
+    {
+    margin-top: 20px;
+    }
+
+    img
+    {
+    max-width: 80%;
+    height: 300px;
+    }
+
+    body
+    {
+    background-color: #345678;
+    }
+
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <h1>Movie Successfully Deleted</h1>
+        <p>Your movie has been deleted from our database.</p>
+        <a href="{% url 'home' %}">Back to Movies</a>
+
+    </div>
+<div class="image-container">
+            <img src="{% static 'images/lot.gif' %}" alt="Deleted Movie Image">
+        </div>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<!--<h1>this is view booking</h1>-->
+<style>
+body
+{background-color:white}
+
+p
+{font-size:20px;
+color:red;}
+
+</style>
+
+
+<!--<table class="table table-bordered">-->
+<!--    <tr>-->
+<!--        <th>Movie Poster</th>-->
+<!--          <td><img src="{{b1.image.url}}" height="150px"></td></tr>-->
+
+<!--        <th>TITLE</th>-->
+<!--            <td>{{b1.title}}</td></tr>-->
+
+<!--        <th>Director</th>-->
+<!--            <td>{{b1.director}}</td></tr>-->
+
+<!--        <th>descrrption</th>-->
+<!--            <td>{{b1.discription}}</td></tr>-->
+
+<!--</table>-->
+
+<!--<div class="movie-container" style="border:2px solid black;">-->
+
+<!--    <img src="{{ b1.image.url }}" height="450px">-->
+
+<!--    <div class="movie-info">-->
+<!--        <h2> Movie Name :{{ b1.title }}</h2>-->
+<!--        <h5>Director :{{ b1.director }}</h5>-->
+<!--        <h5>Discrrption :{{ b1.discription }}</h5>-->
+<!--    </div>-->
+
+<!--</div>-->
+
+<div class="row">
+        <div  class="col-sm-6">
+
+            <img src="{{ b1.image.url }}" height="450px">
+
+        </div>
+
+       <div class="col-sm-6">
+
+           <h2> Movie Name : {{ b1.title }}</h2>
+           <h5>Director : {{ b1.director }}</h5>
+           <h5>Genre : {{ b1.discription }}</h5>
+           <td><a class="btn btn-warning" href="{% url 'update' b1.id %}" >Update</a></td>
+           <td><a class="btn btn-danger" href="{% url 'delete' b1.id %}" >Delete</a></td>
+
+
+
+
+
+
+       </div>
+
+
+
+
+{% endblock %}
